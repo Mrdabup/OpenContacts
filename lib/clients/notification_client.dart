@@ -2,9 +2,9 @@ import 'dart:convert';
 
 import 'package:collection/collection.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart' as fln;
-import 'package:recon/auxiliary.dart';
-import 'package:recon/models/message.dart';
-import 'package:recon/models/session.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/models/message.dart';
+import 'package:OpenContacts/models/session.dart';
 
 class NotificationChannel {
   final String id;

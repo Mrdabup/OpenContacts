@@ -7,9 +7,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:recon/clients/settings_client.dart';
-import 'package:recon/main.dart';
-import 'package:recon/models/authentication_data.dart';
+import 'package:OpenContacts/clients/settings_client.dart';
+import 'package:OpenContacts/main.dart';
+import 'package:OpenContacts/models/authentication_data.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

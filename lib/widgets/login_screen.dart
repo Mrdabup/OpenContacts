@@ -3,9 +3,9 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/authentication_data.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/authentication_data.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({this.onLoginSuccessful, this.cachedUsername, super.key});

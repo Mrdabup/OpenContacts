@@ -1,4 +1,4 @@
-import 'package:recon/auxiliary.dart';
+import 'package:OpenContacts/auxiliary.dart';
 
 class Entitlement {
   Entitlement();

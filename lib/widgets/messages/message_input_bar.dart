@@ -7,14 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-import 'package:recon/apis/record_api.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/clients/messaging_client.dart';
-import 'package:recon/models/message.dart';
-import 'package:recon/models/users/friend.dart';
-import 'package:recon/widgets/messages/message_attachment_list.dart';
+import 'package:OpenContacts/apis/record_api.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/clients/messaging_client.dart';
+import 'package:OpenContacts/models/message.dart';
+import 'package:OpenContacts/models/users/friend.dart';
+import 'package:OpenContacts/widgets/messages/message_attachment_list.dart';
 import 'package:record/record.dart';
 
 class MessageInputBar extends StatefulWidget {

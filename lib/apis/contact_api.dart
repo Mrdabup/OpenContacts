@@ -1,11 +1,11 @@
 import 'dart:convert';
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/users/friend.dart';
-import 'package:recon/models/users/friend_status.dart';
-import 'package:recon/models/users/user.dart';
-import 'package:recon/models/users/user_profile.dart';
-import 'package:recon/models/users/user_status.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/users/friend.dart';
+import 'package:OpenContacts/models/users/friend_status.dart';
+import 'package:OpenContacts/models/users/user.dart';
+import 'package:OpenContacts/models/users/user_profile.dart';
+import 'package:OpenContacts/models/users/user_status.dart';
 
 class ContactApi {
   static Future<List<Friend>> getFriendsList(ApiClient client, {DateTime? lastStatusUpdate}) async {

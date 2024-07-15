@@ -4,9 +4,9 @@ import 'package:ffmpeg_kit_flutter_audio/ffmpeg_kit.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/message.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/message.dart';
 
 class AudioCacheClient {
   final Future<Directory> _directoryFuture = getTemporaryDirectory();

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/message.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/message.dart';
 
 class MessageApi {
   static Future<List<Message>> getUserMessages(ApiClient client, {String userId = "", DateTime? fromTime,

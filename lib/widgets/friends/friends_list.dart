@@ -1,7 +1,7 @@
-import 'package:recon/clients/messaging_client.dart';
-import 'package:recon/widgets/default_error_widget.dart';
-import 'package:recon/widgets/friends/expanding_input_fab.dart';
-import 'package:recon/widgets/friends/friend_list_tile.dart';
+import 'package:OpenContacts/clients/messaging_client.dart';
+import 'package:OpenContacts/widgets/default_error_widget.dart';
+import 'package:OpenContacts/widgets/friends/expanding_input_fab.dart';
+import 'package:OpenContacts/widgets/friends/friend_list_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -13,17 +13,17 @@ import 'package:intl/intl.dart';
 import 'package:logging/logging.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
-import 'package:recon/apis/github_api.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/clients/inventory_client.dart';
-import 'package:recon/clients/messaging_client.dart';
-import 'package:recon/clients/session_client.dart';
-import 'package:recon/clients/settings_client.dart';
-import 'package:recon/models/sem_ver.dart';
-import 'package:recon/widgets/homepage.dart';
-import 'package:recon/widgets/login_screen.dart';
-import 'package:recon/widgets/update_notifier.dart';
+import 'package:OpenContacts/apis/github_api.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/clients/inventory_client.dart';
+import 'package:OpenContacts/clients/messaging_client.dart';
+import 'package:OpenContacts/clients/session_client.dart';
+import 'package:OpenContacts/clients/settings_client.dart';
+import 'package:OpenContacts/models/sem_ver.dart';
+import 'package:OpenContacts/widgets/homepage.dart';
+import 'package:OpenContacts/widgets/login_screen.dart';
+import 'package:OpenContacts/widgets/update_notifier.dart';
 
 import 'models/authentication_data.dart';
 

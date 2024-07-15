@@ -1,4 +1,4 @@
-import 'package:recon/client_holder.dart';
+import 'package:OpenContacts/client_holder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:intl/intl.dart';

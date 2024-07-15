@@ -1,9 +1,9 @@
 import 'package:collection/collection.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/clients/messaging_client.dart';
-import 'package:recon/models/users/online_status.dart';
-import 'package:recon/widgets/friends/user_search.dart';
-import 'package:recon/widgets/my_profile_dialog.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/clients/messaging_client.dart';
+import 'package:OpenContacts/models/users/online_status.dart';
+import 'package:OpenContacts/widgets/friends/user_search.dart';
+import 'package:OpenContacts/widgets/my_profile_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';

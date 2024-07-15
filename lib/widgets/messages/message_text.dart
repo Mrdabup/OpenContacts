@@ -2,9 +2,9 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:recon/models/message.dart';
-import 'package:recon/widgets/formatted_text.dart';
-import 'package:recon/widgets/messages/message_state_indicator.dart';
+import 'package:OpenContacts/models/message.dart';
+import 'package:OpenContacts/widgets/formatted_text.dart';
+import 'package:OpenContacts/widgets/messages/message_state_indicator.dart';
 
 class MessageText extends StatelessWidget {
   const MessageText({required this.message, this.foregroundColor, super.key});

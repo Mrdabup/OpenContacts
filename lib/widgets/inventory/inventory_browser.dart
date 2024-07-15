@@ -5,13 +5,13 @@ import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:provider/provider.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/clients/inventory_client.dart';
-import 'package:recon/models/inventory/resonite_directory.dart';
-import 'package:recon/models/records/record.dart';
-import 'package:recon/widgets/default_error_widget.dart';
-import 'package:recon/widgets/inventory/object_inventory_tile.dart';
-import 'package:recon/widgets/inventory/path_inventory_tile.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/clients/inventory_client.dart';
+import 'package:OpenContacts/models/inventory/resonite_directory.dart';
+import 'package:OpenContacts/models/records/record.dart';
+import 'package:OpenContacts/widgets/default_error_widget.dart';
+import 'package:OpenContacts/widgets/inventory/object_inventory_tile.dart';
+import 'package:OpenContacts/widgets/inventory/path_inventory_tile.dart';
 
 class InventoryBrowser extends StatefulWidget {
   const InventoryBrowser({super.key});

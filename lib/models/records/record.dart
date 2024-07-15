@@ -1,8 +1,8 @@
-import 'package:recon/auxiliary.dart';
-import 'package:recon/models/message.dart';
-import 'package:recon/models/records/asset_digest.dart';
-import 'package:recon/models/records/resonite_db_asset.dart';
-import 'package:recon/string_formatter.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/models/message.dart';
+import 'package:OpenContacts/models/records/asset_digest.dart';
+import 'package:OpenContacts/models/records/resonite_db_asset.dart';
+import 'package:OpenContacts/string_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 

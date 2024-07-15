@@ -1,8 +1,8 @@
 import 'package:collection/collection.dart';
-import 'package:recon/apis/session_api.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/clients/settings_client.dart';
-import 'package:recon/models/session.dart';
+import 'package:OpenContacts/apis/session_api.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/clients/settings_client.dart';
+import 'package:OpenContacts/models/session.dart';
 import 'package:flutter/foundation.dart';
 
 class SessionClient extends ChangeNotifier {
