@@ -306,7 +306,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       icon: const Icon(Icons.refresh),
                       label: const Text("Forgot Password?"),
                     ),
-            ),*/
+            ),*/ // I have to look into this feature and understand how password resseting works
             Center(
               child: AnimatedOpacity(
                 opacity: _errorOpacity,
