@@ -26,7 +26,7 @@ class NotificationClient {
       android: fln.AndroidInitializationSettings("ic_notification"),
       iOS: fln.DarwinInitializationSettings(),
       macOS: fln.DarwinInitializationSettings(),
-      linux: fln.LinuxInitializationSettings(defaultActionName: "Open ReCon"),
+      linux: fln.LinuxInitializationSettings(defaultActionName: "Open recon"),
     ));
 
   Future<void> showUnreadMessagesNotification(Iterable<Message> messages) async {

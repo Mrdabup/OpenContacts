@@ -1,10 +1,10 @@
-<img src="https://github.com/Nutcake/ReCon/raw/main/assets/images/logo512.png" width="200"/>
+<img src="https://github.com/Nutcake/recon/raw/main/assets/images/logo512.png" width="200"/>
 
-# ReCon
+# recon
 
 A Resonite Contacts App
 
-[Get it here](https://github.com/Nutcake/ReCon/releases/latest)
+[Get it here](https://github.com/Nutcake/recon/releases/latest)
 
 ## Building
 
@@ -17,4 +17,4 @@ For example, notifications are currently not supported on non-android builds.
 
 ## Screenshots
 
-<img src="https://github.com/Nutcake/ReCon/assets/10452593/a46ccf8a-0a9f-4518-98e6-84fad2d7bf26" width=198/> <img src="https://github.com/Nutcake/ReCon/assets/10452593/5d158f58-cd27-4a68-abf3-9068e92b6a82" width=198/> <img src="https://github.com/Nutcake/ReCon/assets/10452593/f2ce95ef-e513-46cb-9654-31e74cdc7c09" width=198/> <img src="https://github.com/Nutcake/ReCon/assets/10452593/58ef5e5e-1b53-4a47-92f8-bcbcba7a1e86" width=198/>
+<img src="https://github.com/Nutcake/recon/assets/10452593/a46ccf8a-0a9f-4518-98e6-84fad2d7bf26" width=198/> <img src="https://github.com/Nutcake/recon/assets/10452593/5d158f58-cd27-4a68-abf3-9068e92b6a82" width=198/> <img src="https://github.com/Nutcake/recon/assets/10452593/f2ce95ef-e513-46cb-9654-31e74cdc7c09" width=198/> <img src="https://github.com/Nutcake/recon/assets/10452593/58ef5e5e-1b53-4a47-92f8-bcbcba7a1e86" width=198/>

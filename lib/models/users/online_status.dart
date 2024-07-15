@@ -5,14 +5,16 @@ enum OnlineStatus {
   invisible,
   away,
   busy,
-  online;
+  online,
+  sociable;
 
   static final List<Color> _colors = [
     Colors.transparent,
-    Colors.transparent,
+    Colors.grey,
     Colors.yellow,
     Colors.red,
     Colors.green,
+    Colors.blue,
   ];
 
   Color color(BuildContext context) => this == OnlineStatus.offline || this == OnlineStatus.invisible
@@ -28,6 +30,8 @@ enum OnlineStatus {
 
   int compareTo(OnlineStatus other) {
     if (this == other) return 0;
+    if (this == OnlineStatus.sociable) return -1;
+    if (other == OnlineStatus.sociable) return 1;
     if (this == OnlineStatus.online) return -1;
     if (other == OnlineStatus.online) return 1;
     if (this == OnlineStatus.away) return -1;

@@ -14,7 +14,7 @@ import 'package:recon/models/authentication_data.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(ReCon(
+    await tester.pumpWidget(recon(
       settingsClient: SettingsClient(),
       cachedAuthentication: AuthenticationData.unauthenticated(),
     ));

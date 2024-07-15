@@ -74,14 +74,14 @@ class SettingsPage extends StatelessWidget {
           ),
           ListTile(
             trailing: const Icon(Icons.info_outline),
-            title: const Text("About ReCon"),
+            title: const Text("About recon"),
             onTap: () async {
               showAboutDialog(
                 context: context,
                 applicationVersion: (await PackageInfo.fromPlatform()).version,
                 applicationIcon: InkWell(
                   onTap: () async {
-                    if (!await launchUrl(Uri.parse("https://github.com/Nutcake/ReCon"),
+                    if (!await launchUrl(Uri.parse("https://github.com/Nutcake/recon"),
                         mode: LaunchMode.externalApplication)) {
                       if (context.mounted) {
                         ScaffoldMessenger.of(context)

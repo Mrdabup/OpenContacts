@@ -55,13 +55,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   );
   Future<void> submit() async {
-    if (_usernameController.text.contains(emailReg) || _passwordController.text.isEmpty) {
-      setState(() {
-        _error = "Email found! YAAAAY!";
-        _isUsernameEmail = true;
-      });    
-    }
-    if (_usernameController.text.isEmpty ||_usernameController.text.contains(emailReg) || _passwordController.text.isEmpty) { //some little thing is giving me the hiccups
+    
+    if (_usernameController.text.isEmpty || _passwordController.text.isEmpty) { 
       setState(() {
         _error = "Please enter a valid username/password combination.";
       });
@@ -116,7 +111,62 @@ class _LoginScreenState extends State<LoginScreen> {
       });
     }
   }
-
+    Future<void> passwordResetSubmit() async {
+ if (_usernameController.text.contains(emailReg) || _passwordController.text.isEmpty) { 
+      setState(() {
+        _error = "Please provide an email on the 'Username' textbox";
+      });
+      return;
+    }
+    setState(() {
+      _error = "";
+      _isLoading = false;
+    });
+    /*try {
+      final authData = await ApiClient.tryLogin(
+        username: _usernameController.text,
+        password: _passwordController.text,
+        oneTimePad: _totpController.text.isEmpty ? null : _totpController.text,
+      );
+      if (!authData.isAuthenticated) {
+        setState(() {
+          _error = "Login unsuccessful: Server sent invalid response.";
+          _isLoading = false;
+        });
+        return;
+      }
+      setState(() {
+        _error = "";
+        _isLoading = false;
+      });
+      await loginSuccessful(authData);
+    } catch (e, s) {
+      setState(() {
+        if (e == ApiClient.totpKey) {
+          if (_needsTotp == false) {
+            _error = "Please enter your 2FA-Code";
+            _totpFocusNode.requestFocus();
+            WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+              _scrollController.animateTo(_scrollController.position.maxScrollExtent,
+                  duration: const Duration(milliseconds: 400), curve: Curves.easeOutCirc);
+            });
+          } else {
+            _error = "The given 2FA code is not valid.";
+          }
+          _needsTotp = true;
+        } else {
+          _error = "Login unsuccessful: $e.";
+        }
+        if (kDebugMode) {
+          FlutterError.reportError(FlutterErrorDetails(
+            exception: e,
+            stack: s,
+          ));
+        }
+        _isLoading = false;
+      });
+    }*/
+    }
   Future<void> loginSuccessful(AuthenticationData authData) async {
     final settingsClient = ClientHolder.of(context).settingsClient;
     final notificationManager = FlutterLocalNotificationsPlugin();
@@ -173,7 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("OpenContacts"),
+        title: const Text("recon"),
       ),
       body: Builder(builder: (context) {
         return ListView(
@@ -240,13 +290,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       label: const Text("Login"),
                     ),
             ),
-            Padding(
+             Padding(
               padding: const EdgeInsets.only(top: 16),
-              child: _isLoading
+              child: _isUsernameEmail
                   ? const Center(child: CircularProgressIndicator())
                   : TextButton.icon(
-                      onPressed: submit,
-                      icon: const Icon(Icons.question_mark),
+                      onPressed: passwordResetSubmit,
+                      icon: const Icon(Icons.refresh),
                       label: const Text("Forgot Password?"),
                     ),
             ),

@@ -1,4 +1,4 @@
-package de.voidspace.recon
+package me.voidspace.recon
 
 import io.flutter.embedding.android.FlutterActivity
 

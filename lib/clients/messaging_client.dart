@@ -228,17 +228,19 @@ class MessagingClient extends ChangeNotifier {
     // Adjusting values to ensure correct placement of 'headless'
     if (friend.isHeadless) return 2.5;
     switch (friend.userStatus.onlineStatus) {
-      case OnlineStatus.online:
+      case OnlineStatus.sociable:
         return 0;
-      case OnlineStatus.away:
+      case OnlineStatus.online:
         return 1;
-      case OnlineStatus.busy:
+      case OnlineStatus.away:
         return 2;
+      case OnlineStatus.busy:
+        return 3;
       case OnlineStatus.invisible:
-        return 2.5;
+        return 3.5;
       case OnlineStatus.offline:
       default:
-        return 3;
+        return 4;
     }
   }
 

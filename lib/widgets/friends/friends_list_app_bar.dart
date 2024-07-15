@@ -21,7 +21,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
   Widget build(BuildContext context) {
     super.build(context);
     return AppBar(
-      title: const Text("ReCon"),
+      title: const Text("recon"),
       actions: [
         Consumer<MessagingClient>(builder: (context, client, _) {
           return PopupMenuButton<OnlineStatus>(

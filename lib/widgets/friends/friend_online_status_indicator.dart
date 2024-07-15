@@ -12,7 +12,7 @@ class FriendOnlineStatusIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     final UserStatus userStatus = friend.userStatus;
     final OnlineStatus onlineStatus = userStatus.onlineStatus;
-    return userStatus.appVersion.contains("ReCon") && friend.isOnline
+    return userStatus.appVersion.contains("recon") && friend.isOnline
         ? SizedBox.square(
             dimension: 10,
             child: Image.asset(

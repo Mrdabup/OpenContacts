@@ -59,20 +59,20 @@ void main() async {
     // Ignore
   }
 
-  runApp(ReCon(settingsClient: settingsClient, cachedAuthentication: cachedAuth));
+  runApp(recon(settingsClient: settingsClient, cachedAuthentication: cachedAuth));
 }
 
-class ReCon extends StatefulWidget {
-  const ReCon({required this.settingsClient, required this.cachedAuthentication, super.key});
+class recon extends StatefulWidget {
+  const recon({required this.settingsClient, required this.cachedAuthentication, super.key});
 
   final SettingsClient settingsClient;
   final AuthenticationData cachedAuthentication;
 
   @override
-  State<ReCon> createState() => _ReConState();
+  State<recon> createState() => _reconState();
 }
 
-class _ReConState extends State<ReCon> {
+class _reconState extends State<recon> {
   final Typography _typography = Typography.material2021(platform: defaultTargetPlatform);
   final ReceivePort _port = ReceivePort();
   late AuthenticationData _authData = widget.cachedAuthentication;
@@ -165,7 +165,7 @@ class _ReConState extends State<ReCon> {
           child: DynamicColorBuilder(
             builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) => MaterialApp(
               debugShowCheckedModeBanner: true,
-              title: 'ReCon',
+              title: 'recon',
               theme: ThemeData(
                 useMaterial3: true,
                 textTheme: _typography.black,
