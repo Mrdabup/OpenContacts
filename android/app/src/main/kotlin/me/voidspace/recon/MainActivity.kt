@@ -1,4 +1,4 @@
-package debug.tojcklguy.opencontacts
+package de.voidspace.recon
 
 import io.flutter.embedding.android.FlutterActivity
 
