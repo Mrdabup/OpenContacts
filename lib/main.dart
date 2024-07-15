@@ -165,7 +165,7 @@ class _reconState extends State<recon> {
           child: DynamicColorBuilder(
             builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) => MaterialApp(
               debugShowCheckedModeBanner: true,
-              title: 'recon',
+              title: 'OpenContacts',
               theme: ThemeData(
                 useMaterial3: true,
                 textTheme: _typography.black,
