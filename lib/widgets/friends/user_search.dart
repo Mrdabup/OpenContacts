@@ -56,7 +56,7 @@ class _UserSearchState extends State<UserSearch> {
     final mClient = Provider.of<MessagingClient>(context, listen: false);
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Find Users"),
+        title: const Text("Add Users"),
       ),
       body: SafeArea(
         top: false,

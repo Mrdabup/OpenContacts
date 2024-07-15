@@ -54,7 +54,7 @@ class UpdateNotifier extends StatelessWidget {
                         .secondary
                 ),
                 icon: const Icon(Icons.download),
-                label: const Text("Get it on Github"),
+                label: const Text("Get it on Forgejo"),
               ),
             ],
           ),

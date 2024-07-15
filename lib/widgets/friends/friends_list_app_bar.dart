@@ -21,7 +21,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
   Widget build(BuildContext context) {
     super.build(context);
     return AppBar(
-      title: const Text("recon"),
+      title: const Text("OpenContacts"),
       actions: [
         Consumer<MessagingClient>(builder: (context, client, _) {
           return PopupMenuButton<OnlineStatus>(
@@ -85,7 +85,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
             },
             itemBuilder: (BuildContext context) => [
               MenuItemDefinition(
-                name: "Find Users",
+                name: "Add Users",
                 icon: Icons.person_add,
                 onTap: () async {
                   final mClient = Provider.of<MessagingClient>(context, listen: false);

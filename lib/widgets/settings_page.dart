@@ -95,7 +95,7 @@ class SettingsPage extends StatelessWidget {
                     child: Image.asset("assets/images/logo512.png"),
                   ),
                 ),
-                applicationLegalese: "Created by Nutcake with love <3",
+                applicationLegalese: "ReCon by Nutcake, OpenContacts by ThatOneJackalGuy. Both apps made with <3",
               );
             },
           )

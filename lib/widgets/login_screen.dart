@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   late final FocusNode _totpFocusNode;
 
   bool _isLoading = false;
-  bool _isUsernameEmail = false;
+  bool _isEmailResetSend = false;
   String _error = "";
   bool _needsTotp = false;
 
@@ -47,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
     _totpFocusNode.dispose();
     super.dispose();
   }
-  RegExp emailReg = new RegExp(
+  RegExp emailReg = RegExp(
     r"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$",
 
     caseSensitive: false,
@@ -112,15 +112,22 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
     Future<void> passwordResetSubmit() async {
- if (_usernameController.text.contains(emailReg) || _passwordController.text.isEmpty) { 
+ if (_usernameController.text.isEmpty) { 
       setState(() {
         _error = "Please provide an email on the 'Username' textbox";
       });
       return;
     }
+     if (_usernameController.text.contains(emailReg)) { 
+      setState(() {
+        _error = "An email to reset your password has been requested to resonite.";
+        _isEmailResetSend = true;
+      });
+      return;
+    }
     setState(() {
       _error = "";
-      _isLoading = false;
+      _isEmailResetSend = true;
     });
     /*try {
       final authData = await ApiClient.tryLogin(
@@ -223,7 +230,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("recon"),
+        title: const Text("OpenContacts"),
       ),
       body: Builder(builder: (context) {
         return ListView(
@@ -292,7 +299,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
              Padding(
               padding: const EdgeInsets.only(top: 16),
-              child: _isUsernameEmail
+              child: _isEmailResetSend
                   ? const Center(child: CircularProgressIndicator())
                   : TextButton.icon(
                       onPressed: passwordResetSubmit,
