@@ -49,7 +49,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "de.voidspace.recon"
+        applicationId "de.tojcklguy.opencontacts"
         minSdkVersion 24
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()

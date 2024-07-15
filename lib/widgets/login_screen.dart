@@ -111,8 +111,8 @@ class _LoginScreenState extends State<LoginScreen> {
       });
     }
   }
-    Future<void> passwordResetSubmit() async {
- if (_usernameController.text.isEmpty) { 
+  Future<void> passwordResetSubmit() async {
+    if (_usernameController.text.isEmpty) { 
       setState(() {
         _error = "Please provide an email on the 'Username' textbox";
       });
@@ -297,7 +297,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       label: const Text("Login"),
                     ),
             ),
-             Padding(
+             /*Padding(
               padding: const EdgeInsets.only(top: 16),
               child: _isEmailResetSend
                   ? const Center(child: CircularProgressIndicator())
@@ -306,7 +306,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       icon: const Icon(Icons.refresh),
                       label: const Text("Forgot Password?"),
                     ),
-            ),
+            ),*/
             Center(
               child: AnimatedOpacity(
                 opacity: _errorOpacity,

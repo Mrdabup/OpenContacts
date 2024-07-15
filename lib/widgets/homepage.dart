@@ -17,8 +17,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   static const List<Widget> _appBars = [
-    FriendsListAppBar(),
     SessionListAppBar(),
+    FriendsListAppBar(),
     InventoryBrowserAppBar(),
     SettingsAppBar()
   ];
@@ -41,8 +41,8 @@ class _HomeState extends State<Home> {
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: const [
-          FriendsList(),
           SessionList(),
+          FriendsList(),
           InventoryBrowser(),
           SettingsPage(),
         ],
@@ -61,12 +61,12 @@ class _HomeState extends State<Home> {
         },
         destinations: const [
           NavigationDestination(
-            icon: Icon(Icons.message),
-            label: "Chat",
-          ),
-          NavigationDestination(
             icon: Icon(Icons.public),
             label: "Sessions",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.message),
+            label: "Chat",
           ),
           NavigationDestination(
             icon: Icon(Icons.inventory),
