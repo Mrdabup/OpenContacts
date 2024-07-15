@@ -27,6 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
   late final FocusNode _totpFocusNode;
 
   bool _isLoading = false;
+  bool _isUsernameEmail = false;
   String _error = "";
   bool _needsTotp = false;
 
@@ -46,9 +47,21 @@ class _LoginScreenState extends State<LoginScreen> {
     _totpFocusNode.dispose();
     super.dispose();
   }
+  RegExp emailReg = new RegExp(
+    r"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$",
 
+    caseSensitive: false,
+    multiLine: false,
+
+  );
   Future<void> submit() async {
-    if (_usernameController.text.isEmpty || _passwordController.text.isEmpty) {
+    if (_usernameController.text.contains(emailReg) || _passwordController.text.isEmpty) {
+      setState(() {
+        _error = "Email found! YAAAAY!";
+        _isUsernameEmail = true;
+      });    
+    }
+    if (_usernameController.text.isEmpty ||_usernameController.text.contains(emailReg) || _passwordController.text.isEmpty) { //some little thing is giving me the hiccups
       setState(() {
         _error = "Please enter a valid username/password combination.";
       });
@@ -160,7 +173,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("ReCon"),
+        title: const Text("OpenContacts"),
       ),
       body: Builder(builder: (context) {
         return ListView(
@@ -225,6 +238,16 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: submit,
                       icon: const Icon(Icons.login),
                       label: const Text("Login"),
+                    ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16),
+              child: _isLoading
+                  ? const Center(child: CircularProgressIndicator())
+                  : TextButton.icon(
+                      onPressed: submit,
+                      icon: const Icon(Icons.question_mark),
+                      label: const Text("Forgot Password?"),
                     ),
             ),
             Center(
