@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:recon/models/sem_ver.dart';
-import 'package:recon/models/users/online_status.dart';
+import 'package:OpenContacts/models/sem_ver.dart';
+import 'package:OpenContacts/models/users/online_status.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 

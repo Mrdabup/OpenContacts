@@ -1,5 +1,5 @@
-import 'package:recon/models/records/record.dart';
-import 'package:recon/widgets/formatted_text.dart';
+import 'package:OpenContacts/models/records/record.dart';
+import 'package:OpenContacts/widgets/formatted_text.dart';
 import 'package:flutter/material.dart';
 
 class PathInventoryTile extends StatelessWidget {

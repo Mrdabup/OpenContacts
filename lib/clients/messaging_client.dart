@@ -5,21 +5,21 @@ import 'package:flutter/widgets.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:logging/logging.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import 'package:recon/apis/contact_api.dart';
-import 'package:recon/apis/message_api.dart';
-import 'package:recon/apis/session_api.dart';
-import 'package:recon/apis/user_api.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/clients/notification_client.dart';
-import 'package:recon/clients/settings_client.dart';
-import 'package:recon/crypto_helper.dart';
-import 'package:recon/hub_manager.dart';
-import 'package:recon/models/hub_events.dart';
-import 'package:recon/models/message.dart';
-import 'package:recon/models/session.dart';
-import 'package:recon/models/users/friend.dart';
-import 'package:recon/models/users/online_status.dart';
-import 'package:recon/models/users/user_status.dart';
+import 'package:OpenContacts/apis/contact_api.dart';
+import 'package:OpenContacts/apis/message_api.dart';
+import 'package:OpenContacts/apis/session_api.dart';
+import 'package:OpenContacts/apis/user_api.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/clients/notification_client.dart';
+import 'package:OpenContacts/clients/settings_client.dart';
+import 'package:OpenContacts/crypto_helper.dart';
+import 'package:OpenContacts/hub_manager.dart';
+import 'package:OpenContacts/models/hub_events.dart';
+import 'package:OpenContacts/models/message.dart';
+import 'package:OpenContacts/models/session.dart';
+import 'package:OpenContacts/models/users/friend.dart';
+import 'package:OpenContacts/models/users/online_status.dart';
+import 'package:OpenContacts/models/users/user_status.dart';
 
 class MessagingClient extends ChangeNotifier {
   static const Duration _autoRefreshDuration = Duration(seconds: 10);
@@ -228,17 +228,19 @@ class MessagingClient extends ChangeNotifier {
     // Adjusting values to ensure correct placement of 'headless'
     if (friend.isHeadless) return 2.5;
     switch (friend.userStatus.onlineStatus) {
-      case OnlineStatus.online:
+      case OnlineStatus.sociable:
         return 0;
-      case OnlineStatus.away:
+      case OnlineStatus.online:
         return 1;
-      case OnlineStatus.busy:
+      case OnlineStatus.away:
         return 2;
+      case OnlineStatus.busy:
+        return 3;
       case OnlineStatus.invisible:
-        return 2.5;
+        return 3.5;
       case OnlineStatus.offline:
       default:
-        return 3;
+        return 4;
     }
   }
 

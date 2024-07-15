@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:recon/apis/record_api.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/inventory/resonite_directory.dart';
-import 'package:recon/models/records/record.dart';
+import 'package:OpenContacts/apis/record_api.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/inventory/resonite_directory.dart';
+import 'package:OpenContacts/models/records/record.dart';
 
 enum SortMode {
   name,

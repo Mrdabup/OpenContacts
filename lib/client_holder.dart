@@ -1,8 +1,8 @@
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/clients/notification_client.dart';
-import 'package:recon/clients/settings_client.dart';
-import 'package:recon/models/authentication_data.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/clients/notification_client.dart';
+import 'package:OpenContacts/clients/settings_client.dart';
+import 'package:OpenContacts/models/authentication_data.dart';
 import 'package:flutter/material.dart';
 
 class ClientHolder extends InheritedWidget {

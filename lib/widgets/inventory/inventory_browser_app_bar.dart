@@ -9,8 +9,8 @@ import 'package:intl/intl.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/clients/inventory_client.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/clients/inventory_client.dart';
 import 'package:share_plus/share_plus.dart';
 
 class InventoryBrowserAppBar extends StatefulWidget {

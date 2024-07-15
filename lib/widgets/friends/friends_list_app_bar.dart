@@ -1,9 +1,9 @@
 import 'package:collection/collection.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/clients/messaging_client.dart';
-import 'package:recon/models/users/online_status.dart';
-import 'package:recon/widgets/friends/user_search.dart';
-import 'package:recon/widgets/my_profile_dialog.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/clients/messaging_client.dart';
+import 'package:OpenContacts/models/users/online_status.dart';
+import 'package:OpenContacts/widgets/friends/user_search.dart';
+import 'package:OpenContacts/widgets/my_profile_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -21,7 +21,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
   Widget build(BuildContext context) {
     super.build(context);
     return AppBar(
-      title: const Text("ReCon"),
+      title: const Text("OpenContacts"),
       actions: [
         Consumer<MessagingClient>(builder: (context, client, _) {
           return PopupMenuButton<OnlineStatus>(
@@ -53,7 +53,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
               }
             },
             itemBuilder: (BuildContext context) => OnlineStatus.values
-                .where((element) => element == OnlineStatus.online || element == OnlineStatus.offline).sorted((a, b) => b.index.compareTo(a.index),)
+                .where((element) => element == OnlineStatus.sociable || element == OnlineStatus.online ||element == OnlineStatus.busy || element == OnlineStatus.offline).sorted((a, b) => b.index.compareTo(a.index),)
                 .map(
                   (item) => PopupMenuItem<OnlineStatus>(
                     value: item,
@@ -85,7 +85,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
             },
             itemBuilder: (BuildContext context) => [
               MenuItemDefinition(
-                name: "Find Users",
+                name: "Add Users",
                 icon: Icons.person_add,
                 onTap: () async {
                   final mClient = Provider.of<MessagingClient>(context, listen: false);

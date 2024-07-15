@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/personal_profile.dart';
-import 'package:recon/models/users/user.dart';
-import 'package:recon/models/users/user_status.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/personal_profile.dart';
+import 'package:OpenContacts/models/users/user.dart';
+import 'package:OpenContacts/models/users/user_status.dart';
 
 class UserApi {
   static Future<Iterable<User>> searchUsers(ApiClient client, {required String needle}) async {

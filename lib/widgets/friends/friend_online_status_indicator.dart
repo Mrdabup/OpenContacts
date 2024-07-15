@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:recon/models/users/friend.dart';
-import 'package:recon/models/users/online_status.dart';
-import 'package:recon/models/users/user_status.dart';
+import 'package:OpenContacts/models/users/friend.dart';
+import 'package:OpenContacts/models/users/online_status.dart';
+import 'package:OpenContacts/models/users/user_status.dart';
 
 class FriendOnlineStatusIndicator extends StatelessWidget {
   const FriendOnlineStatusIndicator({required this.friend, super.key});
@@ -12,7 +12,7 @@ class FriendOnlineStatusIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     final UserStatus userStatus = friend.userStatus;
     final OnlineStatus onlineStatus = userStatus.onlineStatus;
-    return userStatus.appVersion.contains("ReCon") && friend.isOnline
+    return userStatus.appVersion.contains("recon") && friend.isOnline
         ? SizedBox.square(
             dimension: 10,
             child: Image.asset(

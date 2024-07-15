@@ -3,16 +3,16 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 import 'package:collection/collection.dart';
-import 'package:recon/models/records/asset_digest.dart';
-import 'package:recon/models/records/json_template.dart';
+import 'package:OpenContacts/models/records/asset_digest.dart';
+import 'package:OpenContacts/models/records/json_template.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/records/asset_upload_data.dart';
-import 'package:recon/models/records/resonite_db_asset.dart';
-import 'package:recon/models/records/preprocess_status.dart';
-import 'package:recon/models/records/record.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/records/asset_upload_data.dart';
+import 'package:OpenContacts/models/records/resonite_db_asset.dart';
+import 'package:OpenContacts/models/records/preprocess_status.dart';
+import 'package:OpenContacts/models/records/record.dart';
 import 'package:http_parser/http_parser.dart';
 import 'package:path/path.dart';
 

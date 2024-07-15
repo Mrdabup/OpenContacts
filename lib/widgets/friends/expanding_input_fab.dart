@@ -66,7 +66,7 @@ class _ExpandingInputFabState extends State<ExpandingInputFab> {
                       },
                       splashRadius: 16,
                       iconSize: 28,
-                      icon: _isExtended ? const Icon(Icons.close) : const Icon(Icons.search),
+                      icon: _isExtended ? const Icon(Icons.close) : const Icon(Icons.person_search),
                     ),
                   )
                 ],

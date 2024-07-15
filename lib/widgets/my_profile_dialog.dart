@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:recon/apis/user_api.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/models/personal_profile.dart';
-import 'package:recon/widgets/default_error_widget.dart';
-import 'package:recon/widgets/generic_avatar.dart';
+import 'package:OpenContacts/apis/user_api.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/models/personal_profile.dart';
+import 'package:OpenContacts/widgets/default_error_widget.dart';
+import 'package:OpenContacts/widgets/generic_avatar.dart';
 
 class MyProfileDialog extends StatefulWidget {
   const MyProfileDialog({super.key});

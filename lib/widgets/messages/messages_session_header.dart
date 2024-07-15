@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/models/session.dart';
-import 'package:recon/widgets/formatted_text.dart';
-import 'package:recon/widgets/generic_avatar.dart';
-import 'package:recon/widgets/sessions/session_view.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/models/session.dart';
+import 'package:OpenContacts/widgets/formatted_text.dart';
+import 'package:OpenContacts/widgets/generic_avatar.dart';
+import 'package:OpenContacts/widgets/sessions/session_view.dart';
 
 class SessionTile extends StatelessWidget {
   const SessionTile({required this.session, super.key});

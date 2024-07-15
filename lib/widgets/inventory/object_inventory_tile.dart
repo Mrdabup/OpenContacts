@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/models/records/record.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/models/records/record.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 

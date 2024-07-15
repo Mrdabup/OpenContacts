@@ -3,8 +3,8 @@ import 'dart:io';
 
 import 'package:collection/collection.dart';
 import 'package:flutter/foundation.dart';
-import 'package:recon/config.dart';
-import 'package:recon/models/hub_events.dart';
+import 'package:OpenContacts/config.dart';
+import 'package:OpenContacts/models/hub_events.dart';
 import 'package:logging/logging.dart';
 import 'package:uuid/uuid.dart';
 

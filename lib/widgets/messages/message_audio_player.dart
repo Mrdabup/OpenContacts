@@ -3,10 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:provider/provider.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/clients/audio_cache_client.dart';
-import 'package:recon/models/message.dart';
-import 'package:recon/widgets/messages/message_state_indicator.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/clients/audio_cache_client.dart';
+import 'package:OpenContacts/models/message.dart';
+import 'package:OpenContacts/widgets/messages/message_state_indicator.dart';
 
 class MessageAudioPlayer extends StatefulWidget {
   const MessageAudioPlayer({required this.message, this.foregroundColor, super.key});

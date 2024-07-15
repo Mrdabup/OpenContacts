@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/models/cloud_variable.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/models/cloud_variable.dart';
 
 class CloudVariableApi {
   static Future<CloudVariable> readCloudVariable(ApiClient client,

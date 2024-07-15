@@ -13,17 +13,17 @@ import 'package:intl/intl.dart';
 import 'package:logging/logging.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
-import 'package:recon/apis/github_api.dart';
-import 'package:recon/client_holder.dart';
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/clients/inventory_client.dart';
-import 'package:recon/clients/messaging_client.dart';
-import 'package:recon/clients/session_client.dart';
-import 'package:recon/clients/settings_client.dart';
-import 'package:recon/models/sem_ver.dart';
-import 'package:recon/widgets/homepage.dart';
-import 'package:recon/widgets/login_screen.dart';
-import 'package:recon/widgets/update_notifier.dart';
+import 'package:OpenContacts/apis/github_api.dart';
+import 'package:OpenContacts/client_holder.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/clients/inventory_client.dart';
+import 'package:OpenContacts/clients/messaging_client.dart';
+import 'package:OpenContacts/clients/session_client.dart';
+import 'package:OpenContacts/clients/settings_client.dart';
+import 'package:OpenContacts/models/sem_ver.dart';
+import 'package:OpenContacts/widgets/homepage.dart';
+import 'package:OpenContacts/widgets/login_screen.dart';
+import 'package:OpenContacts/widgets/update_notifier.dart';
 
 import 'models/authentication_data.dart';
 
@@ -59,20 +59,20 @@ void main() async {
     // Ignore
   }
 
-  runApp(ReCon(settingsClient: settingsClient, cachedAuthentication: cachedAuth));
+  runApp(recon(settingsClient: settingsClient, cachedAuthentication: cachedAuth));
 }
 
-class ReCon extends StatefulWidget {
-  const ReCon({required this.settingsClient, required this.cachedAuthentication, super.key});
+class recon extends StatefulWidget {
+  const recon({required this.settingsClient, required this.cachedAuthentication, super.key});
 
   final SettingsClient settingsClient;
   final AuthenticationData cachedAuthentication;
 
   @override
-  State<ReCon> createState() => _ReConState();
+  State<recon> createState() => _reconState();
 }
 
-class _ReConState extends State<ReCon> {
+class _reconState extends State<recon> {
   final Typography _typography = Typography.material2021(platform: defaultTargetPlatform);
   final ReceivePort _port = ReceivePort();
   late AuthenticationData _authData = widget.cachedAuthentication;
@@ -165,7 +165,7 @@ class _ReConState extends State<ReCon> {
           child: DynamicColorBuilder(
             builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) => MaterialApp(
               debugShowCheckedModeBanner: true,
-              title: 'ReCon',
+              title: 'OpenContacts',
               theme: ThemeData(
                 useMaterial3: true,
                 textTheme: _typography.black,

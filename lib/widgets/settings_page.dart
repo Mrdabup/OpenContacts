@@ -1,4 +1,4 @@
-import 'package:recon/client_holder.dart';
+import 'package:OpenContacts/client_holder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:intl/intl.dart';
@@ -74,14 +74,14 @@ class SettingsPage extends StatelessWidget {
           ),
           ListTile(
             trailing: const Icon(Icons.info_outline),
-            title: const Text("About ReCon"),
+            title: const Text("About OpenContacts"),
             onTap: () async {
               showAboutDialog(
                 context: context,
                 applicationVersion: (await PackageInfo.fromPlatform()).version,
                 applicationIcon: InkWell(
                   onTap: () async {
-                    if (!await launchUrl(Uri.parse("https://github.com/Nutcake/ReCon"),
+                    if (!await launchUrl(Uri.parse("https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts"),
                         mode: LaunchMode.externalApplication)) {
                       if (context.mounted) {
                         ScaffoldMessenger.of(context)
@@ -92,10 +92,10 @@ class SettingsPage extends StatelessWidget {
                   child: Container(
                     margin: const EdgeInsets.all(16),
                     constraints: const BoxConstraints(maxWidth: 64),
-                    child: Image.asset("assets/images/logo512.png"),
+                    child: Image.asset("assets/images/testingIcon512.png"),
                   ),
                 ),
-                applicationLegalese: "Created by Nutcake with love <3",
+                applicationLegalese: "ReCon by Nutcake, OpenContacts by ThatOneJackalGuy. Both apps made with <3",
               );
             },
           )

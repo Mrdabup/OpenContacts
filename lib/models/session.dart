@@ -1,4 +1,4 @@
-import 'package:recon/string_formatter.dart';
+import 'package:OpenContacts/string_formatter.dart';
 
 class Session {
   final String id;

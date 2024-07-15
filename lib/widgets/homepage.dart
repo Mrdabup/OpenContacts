@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:recon/widgets/friends/friends_list.dart';
-import 'package:recon/widgets/friends/friends_list_app_bar.dart';
-import 'package:recon/widgets/inventory/inventory_browser.dart';
-import 'package:recon/widgets/inventory/inventory_browser_app_bar.dart';
-import 'package:recon/widgets/sessions/session_list.dart';
-import 'package:recon/widgets/sessions/session_list_app_bar.dart';
-import 'package:recon/widgets/settings_app_bar.dart';
-import 'package:recon/widgets/settings_page.dart';
+import 'package:OpenContacts/widgets/friends/friends_list.dart';
+import 'package:OpenContacts/widgets/friends/friends_list_app_bar.dart';
+import 'package:OpenContacts/widgets/inventory/inventory_browser.dart';
+import 'package:OpenContacts/widgets/inventory/inventory_browser_app_bar.dart';
+import 'package:OpenContacts/widgets/sessions/session_list.dart';
+import 'package:OpenContacts/widgets/sessions/session_list_app_bar.dart';
+import 'package:OpenContacts/widgets/settings_app_bar.dart';
+import 'package:OpenContacts/widgets/settings_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,8 +17,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   static const List<Widget> _appBars = [
-    FriendsListAppBar(),
     SessionListAppBar(),
+    FriendsListAppBar(),
     InventoryBrowserAppBar(),
     SettingsAppBar()
   ];
@@ -41,8 +41,8 @@ class _HomeState extends State<Home> {
         controller: _pageController,
         physics: const NeverScrollableScrollPhysics(),
         children: const [
-          FriendsList(),
           SessionList(),
+          FriendsList(),
           InventoryBrowser(),
           SettingsPage(),
         ],
@@ -61,12 +61,12 @@ class _HomeState extends State<Home> {
         },
         destinations: const [
           NavigationDestination(
-            icon: Icon(Icons.message),
-            label: "Chat",
-          ),
-          NavigationDestination(
             icon: Icon(Icons.public),
             label: "Sessions",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.message),
+            label: "Chat",
           ),
           NavigationDestination(
             icon: Icon(Icons.inventory),

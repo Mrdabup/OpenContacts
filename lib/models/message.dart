@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:recon/clients/api_client.dart';
-import 'package:recon/apis/message_api.dart';
-import 'package:recon/auxiliary.dart';
-import 'package:recon/string_formatter.dart';
+import 'package:OpenContacts/clients/api_client.dart';
+import 'package:OpenContacts/apis/message_api.dart';
+import 'package:OpenContacts/auxiliary.dart';
+import 'package:OpenContacts/string_formatter.dart';
 import 'package:uuid/uuid.dart';
 
 enum MessageType {
