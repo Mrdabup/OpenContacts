@@ -1,3 +1,4 @@
+import 'package:OpenContacts/models/users/user.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:OpenContacts/apis/session_api.dart';
 import 'package:OpenContacts/auxiliary.dart';
@@ -16,7 +17,6 @@ class SessionView extends StatefulWidget {
   @override
   State<SessionView> createState() => _SessionViewState();
 }
-
 class _SessionViewState extends State<SessionView> {
   Future<Session>? _sessionFuture;
 
@@ -191,10 +191,16 @@ class _SessionViewState extends State<SessionView> {
                             title: Text(
                               user.username,
                               textAlign: TextAlign.start,
+                              style: TextStyle(
+                                color: user.username == session.hostUsername ? Color.fromARGB(255, 230, 158, 80) : Color.fromARGB(255, 209, 209, 209),
+                              )
                             ),
                             subtitle: Text(
                               user.isPresent ? "Active" : "Inactive",
                               textAlign: TextAlign.start,
+                              style: TextStyle(
+                                color: user.isPresent ?  Color.fromARGB(255, 89, 235, 91) : Color.fromARGB(255, 255, 118, 118),
+                              )
                             ),
                           ))
                       .toList(),

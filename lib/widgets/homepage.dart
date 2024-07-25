@@ -65,8 +65,8 @@ class _HomeState extends State<Home> {
             label: "Sessions",
           ),
           NavigationDestination(
-            icon: Icon(Icons.message),
-            label: "Chat",
+            icon: Icon(Icons.contacts),
+            label: "Contacts",
           ),
           NavigationDestination(
             icon: Icon(Icons.inventory),

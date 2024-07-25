@@ -30,7 +30,7 @@ class _MyProfileDialogState extends State<MyProfileDialog> {
       _storageQuotaFuture = UserApi.getStorageQuota(apiClient);
     }
   }
-
+  
   @override
   Widget build(BuildContext context) {
     final tt = Theme.of(context).textTheme;
