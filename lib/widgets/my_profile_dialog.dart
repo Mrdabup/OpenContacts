@@ -6,6 +6,7 @@ import 'package:OpenContacts/client_holder.dart';
 import 'package:OpenContacts/models/personal_profile.dart';
 import 'package:OpenContacts/widgets/default_error_widget.dart';
 import 'package:OpenContacts/widgets/generic_avatar.dart';
+import 'package:OpenContacts/models/users/friend.dart';
 
 class MyProfileDialog extends StatefulWidget {
   const MyProfileDialog({super.key});

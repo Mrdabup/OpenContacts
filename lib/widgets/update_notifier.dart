@@ -38,7 +38,7 @@ class UpdateNotifier extends StatelessWidget {
             children: [
               TextButton.icon(
                 onPressed: () {
-                  launchUrl(Uri.parse("https://github.com/Nutcake/recon/releases/latest"),
+                  launchUrl(Uri.parse("https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts/releases/latest"),
                     mode: LaunchMode.externalApplication,
                   );
                 },

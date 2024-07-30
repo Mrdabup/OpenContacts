@@ -27,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
   late final FocusNode _totpFocusNode;
 
   bool _isLoading = false;
-  bool _isEmailResetSend = false;
   String _error = "";
   bool _needsTotp = false;
 
@@ -47,13 +46,6 @@ class _LoginScreenState extends State<LoginScreen> {
     _totpFocusNode.dispose();
     super.dispose();
   }
-  RegExp emailReg = RegExp(
-    r"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$",
-
-    caseSensitive: false,
-    multiLine: false,
-
-  );
   Future<void> submit() async {
     
     if (_usernameController.text.isEmpty || _passwordController.text.isEmpty) { 

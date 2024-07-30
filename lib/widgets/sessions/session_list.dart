@@ -132,7 +132,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                                   ],
                                                 ),
                                                 const SizedBox(
-                                                  height: 4,
+                                                  height: 2,
                                                 ),
                                                 Row(
                                                   children: [
@@ -149,7 +149,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                                   ],
                                                 ),
                                                 const SizedBox(
-                                                  height: 4,
+                                                  height: 2,
                                                 ),
                                                 Row(
                                                   children: [
