@@ -192,12 +192,18 @@ class _InventoryBrowserState extends State<InventoryBrowser> with AutomaticKeepA
                                       : () async {
                                           await Navigator.push(
                                             context,
-                                            MaterialPageRoute(
-                                              builder: (context) => PhotoView(
-                                                minScale: PhotoViewComputedScale.contained,
-                                                imageProvider:
-                                                    CachedNetworkImageProvider(Aux.resdbToHttp(record.thumbnailUri)),
-                                                heroAttributes: PhotoViewHeroAttributes(tag: record.id),
+                                            MaterialPageRoute( 
+                                              builder: (context) => Scaffold(
+                                                appBar: AppBar(
+                                                  title: Text(record.formattedName.toString()),
+                                                ),
+                                                body: Center (
+                                                  child: CachedNetworkImage(
+                                                    imageUrl: (Aux.resdbToHttp(record.thumbnailUri)),
+                                                    placeholder: (context, url) => const CircularProgressIndicator(),
+                                                    errorWidget: (context, url, error) => const Icon(Icons.error),
+                                                  ),
+                                                ),
                                               ),
                                             ),
                                           );
