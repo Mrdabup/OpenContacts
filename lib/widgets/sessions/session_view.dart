@@ -149,6 +149,22 @@ class _SessionViewState extends State<SessionView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
+                                  "Host: ",
+                                  style: Theme.of(context).textTheme.labelLarge,
+                                ),
+                                Text(
+                                  session.hostUsername,
+                                  style: Theme.of(context).textTheme.labelLarge,
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
                                   "Access: ",
                                   style: Theme.of(context).textTheme.labelLarge,
                                 ),
