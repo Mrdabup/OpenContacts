@@ -149,43 +149,11 @@ class _SessionViewState extends State<SessionView> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Host: ",
-                                  style: Theme.of(context).textTheme.labelLarge,
-                                ),
-                                Text(
-                                  session.hostUsername,
-                                  style: Theme.of(context).textTheme.labelLarge,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
                                   "Access: ",
                                   style: Theme.of(context).textTheme.labelLarge,
                                 ),
                                 Text(
                                   session.accessLevel.toReadableString(),
-                                  style: Theme.of(context).textTheme.labelMedium,
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Headless: ",
-                                  style: Theme.of(context).textTheme.labelLarge,
-                                ),
-                                Text(
-                                  session.headlessHost ? "Yes" : "No",
                                   style: Theme.of(context).textTheme.labelMedium,
                                 ),
                               ],
@@ -204,12 +172,14 @@ class _SessionViewState extends State<SessionView> {
                   session.sessionUsers
                       .map((user) => ListTile(
                             dense: true,
+                            leading: user.username == session.hostUsername && session.headlessHost
+                            ? const Icon(Icons.dns, color: Color(0xFF294D5C))
+                            : user.username == session.hostUsername && !session.headlessHost
+                              ? const Icon(Icons.star, color: Color(0xFFE69E50))
+                              : const Icon(Icons.person),
                             title: Text(
                               user.username,
                               textAlign: TextAlign.start,
-                              style: TextStyle(
-                                color: user.username == session.hostUsername ? Color.fromARGB(255, 230, 158, 80) : Color.fromARGB(255, 209, 209, 209),
-                              )
                             ),
                             subtitle: Text(
                               user.isPresent ? "Active" : "Inactive",

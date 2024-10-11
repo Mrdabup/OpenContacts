@@ -59,7 +59,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                         ? const DefaultErrorWidget(
                             title: "No Sessions Found",
                             message: "Try to adjust your filters",
-                            iconOverride: Icons.public_off,
+                            iconOverride: Icons.question_mark,
                           )
                         : Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 8.0),

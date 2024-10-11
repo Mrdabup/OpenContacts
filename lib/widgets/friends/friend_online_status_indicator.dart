@@ -29,3 +29,4 @@ class FriendOnlineStatusIndicator extends StatelessWidget {
           );
   }
 }
+// TODO: Re-invent the fucking wheel aparently 
