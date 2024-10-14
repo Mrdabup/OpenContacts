@@ -4,10 +4,11 @@
 
 steps:
   - name: build
-    image: ubuntu
+    image: flutter
     commands:
-      - apt-get install -y curl git unzip xz-utils zip libglu1-mesa
-      - vim's installed
+      - echo "Starting to build..."
+      - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
+      - cd ./OpenContacts
   - name: a-test-step
     image: golang:1.16
     commands:
