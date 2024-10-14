@@ -10,5 +10,6 @@ steps:
       - echo "Starting to build..."
       - flutter build --debug
   - name: Deploy
+    image: debian
     commands:
       - echo "Hello World"
