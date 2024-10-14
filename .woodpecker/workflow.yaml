@@ -6,8 +6,8 @@ steps:
   - name: build
     image: debian
     commands:
-      - echo "This is the build step"
-      - echo "This ROCKS!"
+      - apt-get install vim
+      - vim's installed
   - name: a-test-step
     image: golang:1.16
     commands:
