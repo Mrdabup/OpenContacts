@@ -6,7 +6,7 @@ steps:
   - name: build
     image: debian
     commands:
-      - apt-get install vim
+      - apt-get install -y curl git unzip xz-utils zip libglu1-mesa
       - vim's installed
   - name: a-test-step
     image: golang:1.16
