@@ -6,11 +6,9 @@ steps:
   - name: build
     image: instrumentisto/flutter
     commands:
+      - cd OpenContacts
       - echo "Starting to build..."
-      - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
-      - cd ./OpenContacts
-  - name: a-test-step
-    image: golang:1.16
-    commands:
-      - echo "Testing ..."
-      - ./executable
+      - flutter build --debug
+    when:
+      status: failure
+        - echo "Build failed! Consult with maintainer."
