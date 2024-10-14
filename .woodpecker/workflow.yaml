@@ -9,6 +9,6 @@ steps:
       - cd OpenContacts
       - echo "Starting to build..."
       - flutter build --debug
-  -name: Deploy
-   commands:
-    - echo "Hello World"
+  - name: Deploy
+    commands:
+      - echo "Hello World"
