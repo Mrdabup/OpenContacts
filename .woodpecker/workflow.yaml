@@ -9,6 +9,6 @@ steps:
       - cd OpenContacts
       - echo "Starting to build..."
       - flutter build --debug
-    when:
-      status: failure
-        - echo "Build failed! Consult with maintainer."
+  -name: Deploy
+   commands:
+    - echo "Hello World"
