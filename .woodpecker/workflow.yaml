@@ -4,7 +4,7 @@
 
 steps:
   - name: build
-    image: debian
+    image: ubuntu
     commands:
       - apt-get install -y curl git unzip xz-utils zip libglu1-mesa
       - vim's installed
