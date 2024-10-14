@@ -1,0 +1,14 @@
+﻿when:
+  - event: push
+    branch: main
+
+steps:
+  - name: build
+    image: debian
+    commands:
+      - echo "This is the build step"
+  - name: a-test-step
+    image: golang:1.16
+    commands:
+      - echo "Testing ..."
+      - ./executable
