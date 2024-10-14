@@ -4,7 +4,7 @@
 
 steps:
   - name: build
-    image: flutter
+    image: instrumentisto/flutter
     commands:
       - echo "Starting to build..."
       - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
