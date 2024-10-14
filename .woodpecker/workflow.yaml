@@ -7,6 +7,7 @@ steps:
     image: debian
     commands:
       - echo "This is the build step"
+      - echo "This ROCKS!"
   - name: a-test-step
     image: golang:1.16
     commands:
