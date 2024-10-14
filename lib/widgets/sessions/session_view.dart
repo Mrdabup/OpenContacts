@@ -162,7 +162,7 @@ class _SessionViewState extends State<SessionView> {
                           ListSectionHeader(
                             leadingText: "Users",
                             trailingText:
-                                "${session.sessionUsers.length.toString().padLeft(2, "0")}/${session.maxUsers.toString().padLeft(2, "0")}",
+                                "${(session.sessionUsers.length - (!session.headlessHost ?0 :1)).toString().padLeft(2, "0")}/${session.maxUsers.toString().padLeft(2, "0")}",
                             showLine: false,
                           ),
                         ],
