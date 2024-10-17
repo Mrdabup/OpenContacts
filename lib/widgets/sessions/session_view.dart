@@ -1,3 +1,4 @@
+import 'package:OpenContacts/models/users/user.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:OpenContacts/apis/session_api.dart';
 import 'package:OpenContacts/auxiliary.dart';
@@ -16,7 +17,6 @@ class SessionView extends StatefulWidget {
   @override
   State<SessionView> createState() => _SessionViewState();
 }
-
 class _SessionViewState extends State<SessionView> {
   Future<Session>? _sessionFuture;
 
@@ -159,22 +159,6 @@ class _SessionViewState extends State<SessionView> {
                               ],
                             ),
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  "Headless: ",
-                                  style: Theme.of(context).textTheme.labelLarge,
-                                ),
-                                Text(
-                                  session.headlessHost ? "Yes" : "No",
-                                  style: Theme.of(context).textTheme.labelMedium,
-                                ),
-                              ],
-                            ),
-                          ),
                           ListSectionHeader(
                             leadingText: "Users",
                             trailingText:
@@ -188,6 +172,11 @@ class _SessionViewState extends State<SessionView> {
                   session.sessionUsers
                       .map((user) => ListTile(
                             dense: true,
+                            leading: user.username == session.hostUsername && session.headlessHost
+                            ? const Icon(Icons.dns, color: Color(0xFF294D5C))
+                            : user.username == session.hostUsername && !session.headlessHost
+                              ? const Icon(Icons.star, color: Color(0xFFE69E50))
+                              : const Icon(Icons.person),
                             title: Text(
                               user.username,
                               textAlign: TextAlign.start,
@@ -195,6 +184,9 @@ class _SessionViewState extends State<SessionView> {
                             subtitle: Text(
                               user.isPresent ? "Active" : "Inactive",
                               textAlign: TextAlign.start,
+                              style: TextStyle(
+                                color: user.isPresent ?  Color.fromARGB(255, 89, 235, 91) : Color.fromARGB(255, 255, 118, 118),
+                              )
                             ),
                           ))
                       .toList(),

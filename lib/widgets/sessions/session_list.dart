@@ -7,6 +7,7 @@ import 'package:OpenContacts/widgets/formatted_text.dart';
 import 'package:OpenContacts/widgets/sessions/session_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/services.dart';
 
 class SessionList extends StatefulWidget {
   const SessionList({super.key});
@@ -14,6 +15,11 @@ class SessionList extends StatefulWidget {
   @override
   State<SessionList> createState() => _SessionListState();
 }
+class onKeyIntent extends Intent{
+  const onKeyIntent();
+}
+
+const onKey = SingleActivator(LogicalKeyboardKey.f5);
 
 class _SessionListState extends State<SessionList> with AutomaticKeepAliveClientMixin {
   @override
@@ -53,7 +59,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                         ? const DefaultErrorWidget(
                             title: "No Sessions Found",
                             message: "Try to adjust your filters",
-                            iconOverride: Icons.public_off,
+                            iconOverride: Icons.question_mark,
                           )
                         : Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -63,7 +69,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
                                 maxCrossAxisExtent: 256,
                                 crossAxisSpacing: 4,
-                                mainAxisSpacing: 4,
+                                mainAxisSpacing: 1,
                                 childAspectRatio: .8,
                               ),
                               itemBuilder: (context, index) {
@@ -126,7 +132,24 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                                   ],
                                                 ),
                                                 const SizedBox(
-                                                  height: 4,
+                                                  height: 2,
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Expanded(
+                                                      child: Text(
+                                                        "Host: ${session.hostUsername}",
+                                                        maxLines: 1,
+                                                        overflow: TextOverflow.ellipsis,
+                                                        style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                                            color: Color.fromARGB(234, 151, 107, 61)
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                                const SizedBox(
+                                                  height: 2,
                                                 ),
                                                 Row(
                                                   children: [

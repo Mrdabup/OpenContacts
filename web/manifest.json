@@ -1,6 +1,6 @@
 {
-    "name": "recon",
-    "short_name": "recon",
+    "name": "OpenContacts",
+    "short_name": "opc",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

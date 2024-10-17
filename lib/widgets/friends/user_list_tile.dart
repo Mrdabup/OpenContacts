@@ -28,13 +28,13 @@ class _UserListTileState extends State<UserListTile> {
         .of(context)
         .colorScheme;
     final style = _localAdded ? IconButton.styleFrom(
-      foregroundColor: colorScheme.onBackground,
+      foregroundColor: colorScheme.onSurface,
       side: BorderSide(
         color: colorScheme.error,
         width: 2
       ),
     ) : IconButton.styleFrom(
-      foregroundColor: colorScheme.onBackground,
+      foregroundColor: colorScheme.onSurface,
         side: BorderSide(
           color: colorScheme.primary,
           width: 2
@@ -50,7 +50,7 @@ class _UserListTileState extends State<UserListTile> {
         icon: _localAdded ? const Icon(Icons.person_remove) : const Icon(Icons.person_add),
         style: style,
         onPressed: _loading ? null : () async {
-          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Sorry, this feature is not yet available")));
+          ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Sorry, this feature is unavailable.")));
           return;
           setState(() {
             _loading = true;

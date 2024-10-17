@@ -27,7 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
   late final FocusNode _totpFocusNode;
 
   bool _isLoading = false;
-  bool _isEmailResetSend = false;
   String _error = "";
   bool _needsTotp = false;
 
@@ -47,13 +46,6 @@ class _LoginScreenState extends State<LoginScreen> {
     _totpFocusNode.dispose();
     super.dispose();
   }
-  RegExp emailReg = RegExp(
-    r"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$",
-
-    caseSensitive: false,
-    multiLine: false,
-
-  );
   Future<void> submit() async {
     
     if (_usernameController.text.isEmpty || _passwordController.text.isEmpty) { 
@@ -111,69 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
       });
     }
   }
-  Future<void> passwordResetSubmit() async {
-    if (_usernameController.text.isEmpty) { 
-      setState(() {
-        _error = "Please provide an email on the 'Username' textbox";
-      });
-      return;
-    }
-     if (_usernameController.text.contains(emailReg)) { 
-      setState(() {
-        _error = "An email to reset your password has been requested to resonite.";
-        _isEmailResetSend = true;
-      });
-      return;
-    }
-    setState(() {
-      _error = "";
-      _isEmailResetSend = true;
-    });
-    /*try {
-      final authData = await ApiClient.tryLogin(
-        username: _usernameController.text,
-        password: _passwordController.text,
-        oneTimePad: _totpController.text.isEmpty ? null : _totpController.text,
-      );
-      if (!authData.isAuthenticated) {
-        setState(() {
-          _error = "Login unsuccessful: Server sent invalid response.";
-          _isLoading = false;
-        });
-        return;
-      }
-      setState(() {
-        _error = "";
-        _isLoading = false;
-      });
-      await loginSuccessful(authData);
-    } catch (e, s) {
-      setState(() {
-        if (e == ApiClient.totpKey) {
-          if (_needsTotp == false) {
-            _error = "Please enter your 2FA-Code";
-            _totpFocusNode.requestFocus();
-            WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-              _scrollController.animateTo(_scrollController.position.maxScrollExtent,
-                  duration: const Duration(milliseconds: 400), curve: Curves.easeOutCirc);
-            });
-          } else {
-            _error = "The given 2FA code is not valid.";
-          }
-          _needsTotp = true;
-        } else {
-          _error = "Login unsuccessful: $e.";
-        }
-        if (kDebugMode) {
-          FlutterError.reportError(FlutterErrorDetails(
-            exception: e,
-            stack: s,
-          ));
-        }
-        _isLoading = false;
-      });
-    }*/
-    }
+
   Future<void> loginSuccessful(AuthenticationData authData) async {
     final settingsClient = ClientHolder.of(context).settingsClient;
     final notificationManager = FlutterLocalNotificationsPlugin();
@@ -297,16 +227,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       label: const Text("Login"),
                     ),
             ),
-             /*Padding(
-              padding: const EdgeInsets.only(top: 16),
-              child: _isEmailResetSend
-                  ? const Center(child: CircularProgressIndicator())
-                  : TextButton.icon(
-                      onPressed: passwordResetSubmit,
-                      icon: const Icon(Icons.refresh),
-                      label: const Text("Forgot Password?"),
-                    ),
-            ),*/ // I have to look into this feature and understand how password resseting works
             Center(
               child: AnimatedOpacity(
                 opacity: _errorOpacity,

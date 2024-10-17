@@ -21,7 +21,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
   Widget build(BuildContext context) {
     super.build(context);
     return AppBar(
-      title: const Text("OpenContacts"),
+      title: const Text("Contacts"),
       actions: [
         Consumer<MessagingClient>(builder: (context, client, _) {
           return PopupMenuButton<OnlineStatus>(
@@ -84,7 +84,7 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
               await itemDef.onTap();
             },
             itemBuilder: (BuildContext context) => [
-              MenuItemDefinition(
+              /*MenuItemDefinition(
                 name: "Add Users",
                 icon: Icons.person_add,
                 onTap: () async {
@@ -98,7 +98,8 @@ class _FriendsListAppBarState extends State<FriendsListAppBar> with AutomaticKee
                     ),
                   );
                 },
-              ),
+              ),*/ 
+              //TODO: Add users API 
               MenuItemDefinition(
                 name: "My Profile",
                 icon: Icons.person,

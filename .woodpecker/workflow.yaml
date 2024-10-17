@@ -1,0 +1,15 @@
+﻿when:
+  - event: push
+    branch: dev
+
+steps:
+  - name: build
+    image: instrumentisto/flutter
+    commands:
+      - cd OpenContacts
+      - echo "Starting to build..."
+      - flutter build --debug
+  - name: Deploy
+    image: debian
+    commands:
+      - echo "Hello World"

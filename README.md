@@ -1,4 +1,4 @@
-<img src="https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts/raw/branch/dev/assets/images/testingIcon512.png" width="200"/>
+<img src="https://raw.githubusercontent.com/Mrdabup/OpenContacts/refs/heads/dev/assets/images/logo512.png" width="200"/>
 
 ## OpenContacts
 

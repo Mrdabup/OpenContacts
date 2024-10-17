@@ -10,13 +10,15 @@ import 'package:OpenContacts/widgets/formatted_text.dart';
 import 'package:OpenContacts/widgets/friends/friend_online_status_indicator.dart';
 import 'package:OpenContacts/widgets/generic_avatar.dart';
 import 'package:OpenContacts/widgets/messages/messages_list.dart';
+import 'package:OpenContacts/widgets/my_profile_dialog.dart';
 
 class FriendListTile extends StatelessWidget {
-  const FriendListTile({required this.friend, required this.unreads, this.onTap, super.key});
+  const FriendListTile({required this.friend, required this.unreads, this.onTap, super.key, this.onLongPress});
 
   final Friend friend;
   final int unreads;
   final Function? onTap;
+  final Function? onLongPress;
 
   @override
   Widget build(BuildContext context) {
@@ -129,6 +131,14 @@ class FriendListTile extends StatelessWidget {
         );
         mClient.selectedFriend = null;
       },
+      onLongPress: () async {
+          await showDialog(
+              context: context,
+              builder: (context) {
+            return const MyProfileDialog();
+          },
+        );
+      }
     );
   }
 }
