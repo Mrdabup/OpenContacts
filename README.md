@@ -4,7 +4,8 @@
 
 A Resonite Contacts App, based on Nutcake's Recon.
 
-[Get the latest version of OpenContacts here](https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts)
+[Get the latest version of OpenContacts here](https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts/releases)
+[Github is available too!](https://github.com/Mrdabup/OpenContacts/releases)
 
 [Get ReCon here](https://github.com/Nutcake/ReCon)
 
