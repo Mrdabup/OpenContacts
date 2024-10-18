@@ -8,7 +8,6 @@ A Resonite Contacts App, based on Nutcake's Recon.
 
 [Get ReCon here](https://github.com/Nutcake/ReCon)
 
-**WARNING! You must uninstall ReCon and then install OpenContacts, or it might become unstable.**
 
 ## Building
 
