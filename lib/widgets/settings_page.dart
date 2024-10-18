@@ -92,7 +92,7 @@ class SettingsPage extends StatelessWidget {
                   child: Container(
                     margin: const EdgeInsets.all(16),
                     constraints: const BoxConstraints(maxWidth: 64),
-                    child: Image.asset("assets/images/testingIcon512.png"),
+                    child: Image.asset("assets/images/logo512.png"),
                   ),
                 ),
                 applicationLegalese: "ReCon by Nutcake, OpenContacts by ThatOneJackalGuy. Both apps made with <3",
