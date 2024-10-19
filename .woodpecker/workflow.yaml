@@ -13,4 +13,4 @@ steps:
   - name: Deploy
     image: debian
     commands:
-      - echo "Build Sucessfull!"
+      - echo "Build Sucessful!"
