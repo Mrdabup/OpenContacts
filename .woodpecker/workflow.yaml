@@ -9,7 +9,9 @@ steps:
       - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
       - echo "Entering folder"
       - cd OpenContacts
-      - flutter build
+      - echo "Building..."
+      - flutter build apk
+      - echo "Build Completed!"
   - name: Deploy
     image: debian
     commands:
