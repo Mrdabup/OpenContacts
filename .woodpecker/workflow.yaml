@@ -6,10 +6,11 @@ steps:
   - name: build
     image: instrumentisto/flutter
     commands:
+      - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
+      - echo "Entering folder"
       - cd OpenContacts
-      - echo "Starting to build..."
-      - flutter build --debug
+      - flutter build
   - name: Deploy
     image: debian
     commands:
-      - echo "Hello World"
+      - echo "Build Sucessfull!"
