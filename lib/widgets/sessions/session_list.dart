@@ -155,7 +155,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                                   children: [
                                                     Expanded(
                                                       child: Text(
-                                                        "${session.sessionUsers.length.toString().padLeft(2, "0")}/${session.maxUsers.toString().padLeft(2, "0")} Online",
+                                                        "${(session.sessionUsers.length - (session.headlessHost? 1 : 0)).toString().padLeft(2, "0")}/${session.maxUsers.toString().padLeft(2, "0")} Online",
                                                         maxLines: 1,
                                                         overflow: TextOverflow.ellipsis,
                                                         style: Theme.of(context).textTheme.bodySmall?.copyWith(

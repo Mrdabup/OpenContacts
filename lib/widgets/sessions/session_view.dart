@@ -162,7 +162,7 @@ class _SessionViewState extends State<SessionView> {
                           ListSectionHeader(
                             leadingText: "Users",
                             trailingText:
-                                "${session.sessionUsers.length.toString().padLeft(2, "0")}/${session.maxUsers.toString().padLeft(2, "0")}",
+                                "${(session.sessionUsers.length - (session.headlessHost? 1 : 0)).toString().padLeft(2, "0")}/${session.maxUsers.toString().padLeft(2, "0")}", //TODO: Find a way to make it so that inactive users do not count
                             showLine: false,
                           ),
                         ],
