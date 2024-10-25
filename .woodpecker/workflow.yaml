@@ -10,8 +10,8 @@ steps:
       - echo "Entering folder"
       - cd OpenContacts
       - echo "Getting Dependencies"
-      - flutter pub
-      - flutter precache
+      - flutter pub get
+      - flutter precache --android
       - flutter doctor
       - echo "Building..."
       - flutter build apk
