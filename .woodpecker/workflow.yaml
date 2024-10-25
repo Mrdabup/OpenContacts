@@ -6,7 +6,7 @@ steps:
   - name: build
     image: fischerscode/flutter-sudo
     commands:
-      - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
+      - sudo git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
       - echo "Entering folder"
       - cd OpenContacts
       - echo "Getting Dependencies"
