@@ -4,16 +4,16 @@
 
 steps:
   - name: build
-    image: fischerscode/flutter
+    image: fischerscode/flutter-sudo
     commands:
-      - sudo git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
+      - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
       - echo "Entering folder"
       - cd OpenContacts
       - echo "Getting Dependencies"
-      - sudo flutter pub
-      - sudo flutter doctor
+      - flutter pub
+      - flutter doctor
       - echo "Building..."
-      - sudo flutter build apk
+      - flutter build apk
       - echo "Build Completed!"
   - name: Deploy
     image: debian
