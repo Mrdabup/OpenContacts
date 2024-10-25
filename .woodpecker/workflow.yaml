@@ -4,7 +4,7 @@
 
 steps:
   - name: build
-    image: instrumentisto/flutter
+    image: fischerscode/flutter
     commands:
       - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
       - echo "Entering folder"
