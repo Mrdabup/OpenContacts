@@ -10,10 +10,10 @@ steps:
       - echo "Entering folder"
       - cd OpenContacts
       - echo "Getting Dependencies"
-      - flutter pub
-      - flutter doctor
+      - sudo flutter pub
+      - sudo flutter doctor
       - echo "Building..."
-      - flutter build apk
+      - sudo flutter build apk
       - echo "Build Completed!"
   - name: Deploy
     image: debian
