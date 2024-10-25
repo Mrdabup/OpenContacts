@@ -4,13 +4,14 @@
 
 steps:
   - name: build
-    image: fischerscode/flutter-sudo
+    image: instrumentisto/flutter
     commands:
-      - sudo git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
+      - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
       - echo "Entering folder"
       - cd OpenContacts
       - echo "Getting Dependencies"
       - flutter pub
+      - flutter precache
       - flutter doctor
       - echo "Building..."
       - flutter build apk
