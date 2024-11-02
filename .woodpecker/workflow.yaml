@@ -4,15 +4,13 @@
 
 steps:
   - name: android build
-    image: instrumentisto/flutter
+    image: mobiledevops/flutter-sdk-image
     commands:
       - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
       - echo "Entering folder"
       - cd OpenContacts
       - echo "Getting Dependencies"
       - flutter pub get
-      - flutter precache --android
-      - flutter doctor
       - echo "Building..."
       - flutter build apk
       - echo "Build Completed!"
