@@ -1,9 +1,9 @@
 ﻿when:
   - event: push
-    branch: dev
+    branch: Next
 
 steps:
-  - name: build
+  - name: android build
     image: instrumentisto/flutter
     commands:
       - git clone https://git.mrdab.vore.media/ThatOneJackalGuy/OpenContacts.git
@@ -16,7 +16,7 @@ steps:
       - echo "Building..."
       - flutter build apk
       - echo "Build Completed!"
-  - name: Deploy
+  - name: windows build
     image: debian
     commands:
       - echo "Build Sucessful!"
