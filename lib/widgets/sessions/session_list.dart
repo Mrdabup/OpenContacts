@@ -80,7 +80,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                     side: BorderSide(
                                       color: Theme.of(context).colorScheme.outline,
                                     ),
-                                    borderRadius: BorderRadius.circular(16),
+                                    borderRadius: BorderRadius.circular(30),
                                   ),
                                   child: InkWell(
                                     onTap: () {
@@ -94,7 +94,7 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                         Expanded(
                                           flex: 5,
                                           child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(16),
+                                            borderRadius: BorderRadius.circular(30),
                                             child: Hero(
                                               tag: session.id,
                                               child: CachedNetworkImage(
@@ -111,6 +111,11 @@ class _SessionListState extends State<SessionList> with AutomaticKeepAliveClient
                                               ),
                                             ),
                                           ),
+                                        ),
+                                        Expanded(
+                                          flex: 1
+                                          child: Padding(padding: ,),
+
                                         ),
                                         Expanded(
                                           flex: 2,
