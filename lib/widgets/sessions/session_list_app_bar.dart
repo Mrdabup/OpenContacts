@@ -31,7 +31,7 @@ class _SessionListAppBarState extends State<SessionListAppBar> {
                 ),
               );
             },
-            icon: const Icon(Icons.filter_alt_outlined),
+            icon: const Icon(Icons.filter_list),
           ),
         )
       ],

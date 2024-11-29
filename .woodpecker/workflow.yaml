@@ -12,8 +12,9 @@ steps:
       - git config --global --add safe.directory /home/mobiledevops/.flutter-sdk
       - echo "Getting Dependencies"
       - flutter pub get
+      - flutter pub upgrade
       - echo "Building..."
-      - flutter build apk
+      - flutter build apk --debug
       - echo "Build Completed!"
   - name: windows build
     image: debian

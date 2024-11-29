@@ -65,6 +65,8 @@ dependencies:
   share_plus: ^7.1.0
   ffmpeg_kit_flutter_audio: ^6.0.3
   background_downloader: ^7.12.2
+  indexed: ^0.0.8
+  gradient_borders: ^1.0.1
 
 dev_dependencies:
   flutter_test:
