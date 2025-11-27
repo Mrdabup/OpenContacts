@@ -1,5 +1,7 @@
 <img src="https://raw.githubusercontent.com/Mrdabup/OpenContacts/refs/heads/dev/assets/images/logo512.png" width="200"/>
 
+# ARCHIVED
+
 # OpenContacts
 
 A Resonite Contacts App, based on Nutcake's Recon.
